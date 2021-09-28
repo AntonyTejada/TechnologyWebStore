@@ -1,0 +1,26 @@
+﻿@model CategoryModel
+@{
+    ViewData["Title"] = "DetailsCategories";
+}
+
+<h1>Detail Categories</h1>
+
+<div class="text-center">
+    <div class="card" style="width: 20rem;">
+        <div class="col-12 col-md-12 pb-1">
+            <img src="@Model.ImageUrlCategory" class="card-img-top" alt="..." style="height:200px;">
+            <div class="card-body">
+                <h5 class="card-title">@Model.NameCategory</h5>
+                <p class="card-text">@Model.DescriptionCategory</p>
+                <a asp-controller="Product" asp-action="ProductsCategory" asp-route-id="@Model.IdCategory" class="btn btn-info form-control">View to Products</a>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer" style="width: 20rem;"
+        <div class="row">
+            <div class="col-12 col-md-12 pb-1">
+                <a asp-action="Index" class="btn btn-success form-control">Back to Categories</a>
+            </div>
+        </div>
+    </div>
+</div>

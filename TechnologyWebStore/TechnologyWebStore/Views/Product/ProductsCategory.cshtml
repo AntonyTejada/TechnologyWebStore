@@ -1,0 +1,97 @@
+﻿@model IEnumerable<ProductModel>
+@{
+    ViewData["Title"] = "ProductsCategory";
+}
+
+<div class="container-fluid">
+    <form>
+
+
+        <h1>Products of Category</h1>
+
+        <div class="text-center">
+            <div class="row" align="center">
+                @foreach (var products in Model)
+                {
+                    <div class="card" style="width: 20rem;">
+                        <img src="@products.ImageUrlProduct" class="card-img-top" alt="..." style="height:200px;">
+                        <div class="card-body">
+                            <h5 class="card-title">@products.NameProduct</h5>
+                            <p class="card-text">@products.DescriptionProduct</p>
+                            <p class="card-text">@products.MemoryProduct GB</p>
+                            <p class="card-text">@products.StorageCapacityProduct GB</p>
+                            <p class="card-text">@products.ResolutionImageProduct</p>
+                            <p class="card-text">@products.PriceProduct.ToString("c")</p>
+                            <a asp-controller="Home" asp-action="DetailsCategories" asp-route-id="@products.CategoryId" class="btn btn-info">Back Category</a>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <br /> <br />
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Memory</th>
+                    <th scope="col">Storage Capacity</th>
+                    <th scope="col">Resolution Image</th>
+                    <th scope="col">Image Product</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Buy</th>
+                    <th scope="col">Return</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var products in Model)
+                {
+                <tr>
+                    <th scope="row">@products.NameProduct</th>
+                    <td>@products.DescriptionProduct</td>
+                    <td>@products.MemoryProduct GB</td>
+                    <td>@products.StorageCapacityProduct GB</td>
+                    <td>@products.ResolutionImageProduct</td>
+                    <td><img src="@products.ImageUrlProduct" class="card-img-top" alt="..." style="height:200px;"></td>
+                    <td>@products.PriceProduct</td>
+                    <!-- Button trigger modal -->
+                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Product</button></td>
+                    <td><a asp-controller="Home" asp-action="DetailsCategories" asp-route-id="@products.CategoryId" class="btn btn-info">Back Category</a></td>
+                </tr>
+                }
+            </tbody>
+        </table>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+    <script>
+        $(document).ready(function () {
+            var myModal = document.getElementById('myModal')
+            var myInput = document.getElementById('myInput')
+
+            myModal.addEventListener('shown.bs.modal', function () {
+                myInput.focus()
+            })
+        });        
+    </script>
+</div>
