@@ -51,7 +51,10 @@ namespace TechnologyWebStore
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapControllerRoute(
                     name: "Product",
-                    pattern: "{controller=Product}/{action=Index}/{id?}");
+                    pattern: "{controller=Products}/{action=Products}/{id?}");
+                endpoints.MapControllerRoute(
+                    name: "Admin",
+                    pattern: "{controller=Admin}/{action=Products}/{id?}");
             });
         }
     }

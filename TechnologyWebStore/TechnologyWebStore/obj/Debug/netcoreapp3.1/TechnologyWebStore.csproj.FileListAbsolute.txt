@@ -396,3 +396,5 @@ C:\Users\ANTONY\Documents\MVCCore\TechnologyWebStore\TechnologyWebStore\Technolo
 C:\Users\ANTONY\Documents\MVCCore\TechnologyWebStore\TechnologyWebStore\TechnologyWebStore\obj\Debug\netcoreapp3.1\TechnologyWebStore.genruntimeconfig.cache
 C:\Users\ANTONY\Documents\MVCCore\TechnologyWebStore\TechnologyWebStore\TechnologyWebStore\obj\Debug\netcoreapp3.1\TechnologyWebStore.csproj.AssemblyReference.cache
 C:\Users\ANTONY\Documents\MVCCore\TechnologyWebStore\TechnologyWebStore\TechnologyWebStore\obj\Debug\netcoreapp3.1\Razor\Views\Product\ProductsCategory.cshtml.g.cs
+C:\Users\ANTONY\Documents\MVCCore\TechnologyWebStore\TechnologyWebStore\TechnologyWebStore\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Products.cshtml.g.cs
+C:\Users\ANTONY\Documents\MVCCore\TechnologyWebStore\TechnologyWebStore\TechnologyWebStore\obj\Debug\netcoreapp3.1\Razor\Views\Admin\UpsertProduct.cshtml.g.cs

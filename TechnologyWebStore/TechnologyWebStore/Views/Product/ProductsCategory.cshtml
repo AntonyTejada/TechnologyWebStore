@@ -55,7 +55,7 @@
                     <td>@products.StorageCapacityProduct GB</td>
                     <td>@products.ResolutionImageProduct</td>
                     <td><img src="@products.ImageUrlProduct" class="card-img-top" alt="..." style="height:200px;"></td>
-                    <td>@products.PriceProduct</td>
+                    <td>@products.PriceProduct.ToString("c")</td>
                     <!-- Button trigger modal -->
                     <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Product</button></td>
                     <td><a asp-controller="Home" asp-action="DetailsCategories" asp-route-id="@products.CategoryId" class="btn btn-info">Back Category</a></td>
